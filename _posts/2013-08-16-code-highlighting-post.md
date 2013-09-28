@@ -3,11 +3,11 @@ layout: post
 title: Syntax Highlighting Post
 description: "Demo post displaying the various ways of highlighting code in Markdown."
 modified: 2013-08-20
-tags: [sample post, code, highlighting]
+tags: []
 image:
-  feature: abstract-10.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  feature:
+  credit:
+  creditlink:
 share: true
 ---
 

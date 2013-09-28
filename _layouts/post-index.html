@@ -20,8 +20,8 @@
   {% endif %}
   <div class="header-title">
     <div class="header-title-wrap">
-      <h1>{{ site.title }}</h1>
-      <h2 itemprop="name">{{ page.title }}</h2>
+      <h1 itemprop="name"><a href="/">{{ site.title }}</a></h1>
+      <h2 itemprop="description">{{ page.description }}</h2>
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
 </div><!-- /.entry-header -->
@@ -36,7 +36,7 @@
   </footer>
 </div><!-- /.footer-wrapper -->
 
-{% include scripts.html %}          
+{% include scripts.html %}
 
 </body>
 </html>
