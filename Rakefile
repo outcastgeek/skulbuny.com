@@ -49,64 +49,6 @@ task :deploy => :build do
   File.open("_last_deploy.txt", 'w') {|f| f.write(Time.new) }
 end
 
-desc 'Create a post'
-task :create_post, [:post, :date, :content] do |t, args|
-  if args.post == nil or
-     (args.date and args.date.match(/[0-9]+-[0-9]+-[0-9]+/) == nil) then
-    puts "Usage: create post TITLE [DATE]"
-    puts "Date is in the form: Y-m-d"
-    exit 1
-  end
-
-  post_title= args.post
-  post_date= args.date || Time.new.strftime("%Y-%m-%d %H:%M:%S")
-
-  # remove the time from post_date (the filename does not support it)
-  filename = post_date[0..9] + "-" + post_title.gsub(' ', '_') + ".textile"
-
-  # generate a unique filename appending a number
-  i = 1
-  while File.exists?($post_dir + filename) do
-    filename = post_date[0..9] + "-" +
-               post_title.gsub(' ', '_') + "-" + i.to_s +
-               ".textile"
-    i += 1
-  end
-
-  # the if is not really necessary anymore
-  if not File.exists?($post_dir + filename) then
-      File.open($post_dir + filename, 'w') do |f|
-        f.puts "---"
-        f.puts "title: \"#{post_title}\""
-        f.puts "layout: default"
-        f.puts "date: #{post_date}"
-        f.puts "---"
-        f.puts args.content if args.content != nil
-      end
-
-      puts "Post created under \"#{$post_dir}#{filename}\""
-
-      sh "open \"#{$post_dir}#{filename}\"" if args.content == nil
-  else
-    puts "A post with the same name already exists. Aborted."
-  end
-  # puts "You might want to: edit #{$post_dir}#{filename}"
-end
-
-desc 'Create a post with all changes since last deploy'
-task :post_changes do |t, args|
-  content = "Recent changes on the website:\n\n"
-  content << "<ul>\n"
-  IO.popen('find * -newer _last_deploy.txt') do |io|
-    while (line = io.gets) do
-      content << myprocess(line)
-    end
-  end
-  content << "</ul>\n"
-
-  Rake::Task["create_post"].invoke("Recent Changes", Time.new.strftime("%Y-%m-%d %H:%M:%S"), content)
-end
-
 #
 # support functions for generating list of changed files
 #
@@ -215,8 +157,8 @@ module JB
       File.__send__ :join, path
     end
 
-  end #Path
-end #JB
+  end
+end
 
 # Usage: rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
 desc "Begin a new post in #{CONFIG['posts']}"
@@ -243,10 +185,15 @@ task :post do
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts 'description: ""'
+    post.puts "modified: #{date}"
     post.puts "category: \"#{category.gsub(/-/,' ')}\""
-    post.puts "tags: #{tags}"
+    post.puts "tags: [#{tags}]"
+    post.puts "image: "
+    post.puts "  feature: "
+    post.puts "  credit: "
+    post.puts "  creditlink: "
+    post.puts "share: true"
     post.puts "---"
-    post.puts "{% include JB/setup %}"
   end
 end # task :post
 
