@@ -35,7 +35,6 @@ body {
 	padding: 0 20px;
 	h1 {
 		margin: 10px 20px;
-		font-weight: 700;
 		.font-rem(28);
 		color: lighten(@base-color,20);
 		@media @medium {
@@ -73,7 +72,6 @@ body {
 	}
 	h1 {
 		margin: 10px;
-		font-weight: 700;
 		@media @medium {
 			margin: 10px 60px;
 			color: @white;
@@ -276,7 +274,7 @@ body {
 	h3 {
 		margin: 0;
 		.font-rem(28);
-		a { 
+		a {
 			color: @primary;
 		}
 		@media @medium {
@@ -290,11 +288,11 @@ body {
 .list-item {
 	width: 100%;
 	text-align: left;
-	h4 { 
+	h4 {
 		.font-rem(18);
-		margin-bottom: 0; 
+		margin-bottom: 0;
 	}
-	span { 
+	span {
 		display: block;
 		.font-rem(14);
 		color: lighten(@base-color,50);
@@ -308,7 +306,7 @@ body {
 	}
 }
 
-// Post Index 
+// Post Index
 // --------------------------------------------------
 #post-index {
 	#main {
@@ -326,7 +324,9 @@ body {
 	}
 	article {
 		background-color: @white;
-		box-shadow: 0 0 0 1px fade(@base-color,10), 0 6px 12px fade(@base-color,10);
+		box-shadow:
+			0 6px 12px fade(@base-color,10),
+			0 4px 0 fade(@base-color, 15);
 		.rounded(3px);
 		margin-bottom: 20px;
 		padding: 25px 15px;
@@ -357,7 +357,7 @@ body {
 .socialcount {
 	.font-rem(16);
 	font-weight: 700;
-	li { 
+	li {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
@@ -398,7 +398,7 @@ body {
 	color: @primary;
 	border-width: 2px !important;
 	border-style: solid !important;
-	border-color: lighten(@primary,50);
+	border-color: @primary;
 	.rounded(3px);
 }
 #goog-wm-sb {

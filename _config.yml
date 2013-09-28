@@ -8,19 +8,19 @@ disqus_shortname:
 owner:
   name:           Sean Clayton
   avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
+  bio:            "I'm a human interface and experience designer. I make applications work with people."
   email:          sean@skulbuny.com
   # Social networking links used in footer. Update and remove as you like.
   twitter: _seanclayton
-  facebook: SeanOrtencioClayton
+  facebook:
   github: skulbuny
-  stackexchange: skulbuny
+  stackexchange:
   linkedin:
   instagram:
   flickr:
   tumblr:
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:
+  google_plus: https://plus.google.com/104449351420093864920/
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:
@@ -38,8 +38,8 @@ future:      true
 pygments:    true
 markdown:    kramdown
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
+# http://jekyllrb.com/docs/permalinks/
+permalink:   /:categories/:year/:month/:day/:title/
 
 # Amount of post to show on home page
 paginate: 5

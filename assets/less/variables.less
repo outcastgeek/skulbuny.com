@@ -1,10 +1,10 @@
 // Typography
 // --------------------------------------------------
 
-@base-font: 'Lato', Calibri, Arial, sans-serif;
+@base-font: 'Open Sans', Calibri, Arial, sans-serif;
 @heading-font: @base-font;
 @caption-font: @base-font;
-@code-font: monospace;
+@code-font: Monaco, Menlo, Consolas, "Courier New", monospace;
 @alt-font: serif;
 
 @doc-font-size: 16;
@@ -14,21 +14,21 @@
 // set-up the body font-size / line-height
 body {
 	margin-top: 0px + @doc-line-height;
-	font-size: 0px + @doc-font-size;	
+	font-size: 0px + @doc-font-size;
 }
 
 // Colors
 // --------------------------------------------------
-@base-color				: #222;
-@body-color      		: #e8e8e8;
-@text-color      		: #222;
-@comp-color 	 		: spin(@base-color, 180); 
+@base-color				: #303030;
+@body-color      		: #f0f0f0;
+@text-color      		: #303030;
+@comp-color 	 		: spin(@base-color, 180);
 @border-color    		: lighten(@base-color,60);
 @white           		: #fff;
 @black           		: #000;
-@link-color 		    : #222;
+@link-color 		    : #101010;
 
-@primary			: @base-color;
+@primary			: #0099ff;
 @success			: #5cb85c;
 @warning			: #dd8338;
 @danger				: #C64537;

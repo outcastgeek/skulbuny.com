@@ -9,6 +9,7 @@ body {
 // --------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
 	font-family: @heading-font;
+	font-weight: 300;
 }
 h1 {
 	.font-rem(32);
@@ -16,22 +17,22 @@ h1 {
 
 // Links
 // --------------------------------------------------
-a { 
+a {
 	text-decoration: none;
-	color: @link-color; 
-	&:visited { 
-		color: lighten(@link-color, 20); 
+	color: @link-color;
+	&:visited {
+		color: lighten(@link-color, 20);
 	}
-	&:hover { 
-		color: darken(@link-color, 20); 
-	}
-	&:focus { 
-		outline: thin dotted; 
+	&:hover {
 		color: darken(@link-color, 20);
 	}
-	&:hover, 
-	&:active { 
-		outline: 0; 
+	&:focus {
+		outline: thin dotted;
+		color: darken(@link-color, 20);
+	}
+	&:hover,
+	&:active {
+		outline: 0;
 	}
 }
 
@@ -116,9 +117,9 @@ tt, code, kbd, samp, pre {
 	font-family: @code-font;
 }
 p,
-li { 
+li {
 	code {
-		.font-rem(12);
+		.font-rem(14);
 		line-height: 1.5;
 		white-space: nowrap;
 		margin: 0 2px;
