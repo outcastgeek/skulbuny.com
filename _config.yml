@@ -1,20 +1,20 @@
-title:            Site Title
-description:      Describe your website here.
+title:            skulbuny
+description:      design and development
 disqus_shortname:
 #Comment out url when working locally to resolve base urls correctly
 #url:              http://skulbuny.com
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           Sean Clayton
   avatar:         avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  email:          sean@skulbuny.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:
-  facebook:
-  github:
-  stackexchange:
+  twitter: _seanclayton
+  facebook: SeanOrtencioClayton
+  github: skulbuny
+  stackexchange: skulbuny
   linkedin:
   instagram:
   flickr:
@@ -31,11 +31,6 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: Theme Setup
-    url: /theme-setup
-  - title: External Link
-    url: http://mademistakes.com
-    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
