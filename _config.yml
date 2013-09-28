@@ -2,7 +2,7 @@ title:            skulbuny
 description:      design and development
 disqus_shortname:
 #Comment out url when working locally to resolve base urls correctly
-url:              http://stage.skulbuny.com
+url: http://stage.skulbuny.com
 
 # Owner/author information
 owner:
