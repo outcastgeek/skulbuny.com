@@ -25,6 +25,9 @@
     <header class="header-title">
       <div class="header-title-wrap">
         <h1 class="entry-title" itemprop="name"><a href="/">{{ page.title }}</a></h1>
+        {% if page.description %}
+          <h2 class="description" itemprop="description">{{ page.description }}</h2>
+        {% endif %}
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content" itemprop="description">

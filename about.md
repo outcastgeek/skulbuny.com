@@ -1,7 +1,8 @@
 ---
 layout: page
 permalink: /about/
-title: Hi, I'm Sean.
+title: Hi There!
+description: My name is Sean.
 image:
   feature: abstract-5.jpg
 ---
