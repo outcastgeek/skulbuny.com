@@ -150,6 +150,7 @@ figure a img{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-m
 @media only screen and (min-width: 62.5em){figure.half img{width:310px;float:left;margin-right:10px} figure.half figcaption{clear:left}}
 @media only screen and (min-width: 62.5em){figure.third img{width:200px;float:left;margin-right:10px} figure.third figcaption{clear:left}}
 svg:not(:root){overflow:hidden}
+iframe{border:none}
 .btn{display:inline-block;margin-bottom:20px;padding:8px 20px;font-size:14px;font-size:.875rem;background-color:#09f;color:#fff;border-width:2px !important;border-style:solid !important;border-color:#09f;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}.btn:visited{color:#fff}
 .btn:hover{background-color:#fff;color:#09f}
 .btn-success{background-color:#5cb85c;color:#fff;border-color:#5cb85c}.btn-success:visited{color:#fff}

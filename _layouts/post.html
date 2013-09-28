@@ -41,9 +41,9 @@
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="{{ site.url }}/about" title="About {{ site.owner.name }}" itemprop="url">{{ site.owner.name }}</a></span></span>
         {% if page.share %}<div class="social-share">
           <ul class="socialcount socialcount-small inline-list" data-url="{{ site.url }}{{ page.url }}" data-share-text="{{ page.title }}">
-            <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook"><span class="count"><i class="icon-facebook-sign"></i> Like</span></a></li>
-            <li class="twitter"><a href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }}" title="Share on Twitter"><span class="count"><i class="icon-twitter-sign"></i> Tweet</span></a></li>
-            <li class="googleplus"><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google Plus"><span class="count"><i class="icon-google-plus-sign"></i> +1</span></a></li>
+            <li class="facebook"><a href="#" onClick="ShareWindow=window.open('https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}','ShareWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=480,height=320'); return false;" title="Share on Facebook" target="_blank"><span class="count"><i class="icon-facebook-sign"></i> Like</span></a></li>
+            <li class="twitter"><a href="#" onClick="ShareWindow=window.open('https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }}','ShareWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=480,height=320'); return false;" title="Share on Twitter" target="_blank"><span class="count"><i class="icon-twitter-sign"></i> Tweet</span></a></li>
+            <li class="googleplus"><a href="#" onClick="ShareWindow=window.open('https://plus.google.com/share?url={{ site.url }}{{ page.url }}','ShareWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=480,height=320'); return false;" title="Share on Google Plus" target="_blank"><span class="count"><i class="icon-google-plus-sign"></i> +1</span></a></li>
           </ul>
         </div><!-- /.social-share -->{% endif %}
       </footer>
@@ -79,7 +79,7 @@
   </footer>
 </div><!-- /.footer-wrapper -->
 
-{% include scripts.html %}	        
+{% include scripts.html %}
 
 </body>
 </html>
