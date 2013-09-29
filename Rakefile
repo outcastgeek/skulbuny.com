@@ -137,7 +137,7 @@ CONFIG = {
 }
 
 # Path configuration helper
-module JB
+module Paths
   class Path
     SOURCE = "."
     Paths = {
