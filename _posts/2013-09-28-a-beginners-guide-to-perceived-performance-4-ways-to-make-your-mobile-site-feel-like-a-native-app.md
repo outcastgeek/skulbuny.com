@@ -5,7 +5,7 @@ subtitle:
 description: Really neat blog post describing how to create some great UX improvements for web apps and mobile web sites.
 link: http://www.mobify.com/blog/beginners-guide-to-perceived-performance/
 date: 2013-09-15
-tags: []
+tags: [link, front-end development]
 image:
   feature:
   credit:
