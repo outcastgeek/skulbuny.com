@@ -31,7 +31,7 @@ textarea{overflow:auto;vertical-align:top}
 b,i,strong,em,blockquote,p,q,span,figure,img,h1,h2,header,input,a{-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-ms-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}
 body{font-family:'Lato',Calibri,Arial,sans-serif;color:#303030}
 h1,h2,h3,h4,h5,h6{font-family:'Lato',Calibri,Arial,sans-serif;font-weight:300}
-h1{font-weight:100;font-size:32px;font-size:2rem}
+h1{font-size:32px;font-size:2rem}
 a{text-decoration:none;color:#101010}a:visited{color:#434343}
 a:hover{color:#000}
 a:focus{outline:thin dotted;color:#000}
@@ -617,7 +617,7 @@ body{margin:0;padding:0;width:100%;background-color:#f0f0f0}
 .entry:after,.hentry:after{clear:both}
 .entry-content{font-size:16px;font-size:1rem;line-height:1.625;margin-bottom:26px;margin-bottom:1.625rem}.entry-content p>a,.entry-content li>a{border-bottom:1px dotted #909090}.entry-content p>a:hover,.entry-content li>a:hover{border-bottom-style:solid}
 .entry-header{width:100%;overflow:hidden}
-.header-title{text-align:center;margin:30px 0 0;padding:0 20px}.header-title h1{margin:10px 20px;font-size:28px;font-size:1.75rem;color:#636363}@media only screen and (min-width: 48em){.header-title h1{font-size:48px;font-size:3rem}}@media only screen and (min-width: 62.5em){.header-title h1{font-size:80px;font-size:5rem}}
+.header-title{text-align:center;margin:30px 0 0;padding:0 20px}.header-title h1{margin:10px 20px;font-size:28px;font-size:1.75rem;color:#636363;font-weight:300}@media only screen and (min-width: 48em){.header-title h1{font-weight:100;font-size:48px;font-size:3rem}}@media only screen and (min-width: 62.5em){.header-title h1{font-weight:100;font-size:80px;font-size:5rem}}
 .header-title h2{margin:0;font-size:18px;font-size:1.125rem;text-transform:uppercase;color:#969696}@media only screen and (min-width: 48em){.header-title h2{font-size:32px;font-size:2rem}}
 @media only screen and (min-width: 48em){.feature .header-title{position:absolute;top:0;display:table;margin-top:0;width:100%;height:440px;overflow:hidden}.feature .header-title .header-title-wrap{display:table-cell;vertical-align:middle;margin:0 auto;text-align:center}}.feature .header-title h1{margin:10px}@media only screen and (min-width: 48em){.feature .header-title h1{margin:10px 60px;color:#fff;font-size:60px;font-size:3.75rem;text-shadow:1px 1px 4px rgba(48,48,48,0.6)}.feature .header-title h1 a{color:#fff}}@media only screen and (min-width: 62.5em){.feature .header-title h1{font-size:100px;font-size:6.25rem}}
 .feature .header-title h2{margin:0;font-size:18px;font-size:1.125rem;text-transform:uppercase}@media only screen and (min-width: 48em){.feature .header-title h2{font-size:30px;font-size:1.875rem;color:#fff}.feature .header-title h2 a{color:#fff}}
