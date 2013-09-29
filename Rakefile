@@ -191,6 +191,7 @@ task :post do
     post.puts "tags: #{tags}"
     post.puts "image: "
     post.puts "  feature: "
+    post.puts "  thumb: "
     post.puts "  credit: "
     post.puts "  creditlink: "
     post.puts "share: true"
