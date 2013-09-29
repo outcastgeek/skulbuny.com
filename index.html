@@ -3,8 +3,6 @@ layout: post-index
 title: skulbuny
 meta-title: skulbuny
 description: "design and development"
-image:
-  feature:
 ---
 
 {% for post in paginator.posts %}
@@ -18,7 +16,7 @@ image:
     {% endif %}
   </header>
   <div class="entry-content" itemprop="description">
-    {{ post.content }}
+    {{ post.excerpt }}
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 {% endfor %}

@@ -160,7 +160,7 @@ module JB
   end
 end
 
-# Usage: rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
+# Usage: rake post title="A Title" [date="2012-02-09"] [tags=tag1,tag2]
 desc "Begin a new post in #{CONFIG['posts']}"
 task :post do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
@@ -184,10 +184,11 @@ task :post do
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts 'description: ""'
-    post.puts "modified: #{date}"
-    post.puts "category: \"#{category.gsub(/-/,' ')}\""
-    post.puts "tags: [#{tags}]"
+    post.puts "subtitle: "
+    post.puts "description: "
+    post.puts "link: "
+    post.puts "date: #{date}"
+    post.puts "tags: #{tags}"
     post.puts "image: "
     post.puts "  feature: "
     post.puts "  credit: "
