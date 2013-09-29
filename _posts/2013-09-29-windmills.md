@@ -14,5 +14,5 @@ image:
 share: true
 ---
 <figure>
-  <a href="/images/windmills.jpg"><img src="windmills.jpg" alt="Windmills"></a>
+  <a href="/images/windmills.jpg"><img src="/images/windmills.jpg" alt="Windmills"></a>
 </figure>
