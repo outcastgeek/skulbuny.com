@@ -5,7 +5,7 @@ title: Hi There!
 meta-title: About
 description: My name is Sean.
 image:
-  feature: abstract-5.jpg
+  feature: blur-1.jpg
 ---
 I am a <script markdown="0" id="age" type="text/javascript">var d = new Date; var n = d.getFullYear(); document.write(n - 1993);</script> year-old born in Vacaville, California, and raised in good ol’ Kentucky. My father, John is a US Navy Veteran from Westminster, California. My mother, Myrna, is from Pasay City in the Philippines. My father’s side of the family consists mostly of German, Irish, & English peoples. My mother’s side is nearly 100% Filipino, with a very slight hint (<1%) of Spanish.
 
