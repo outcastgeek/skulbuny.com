@@ -5,7 +5,7 @@ subtitle:
 description:
 link:
 date: 2013-09-29
-tags: []
+tags: [video, TTT, gaming]
 image:
   feature:
   thumb:

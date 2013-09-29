@@ -14,6 +14,8 @@ share: true
 ---
 I’m a web/UI designer at heart, not a developer (at least not yet). I’ll be learning C# over the next few semesters at my University, but I still only know HTML/CSS and my basic object-oriented programming knowledge from my programming course in High School (Very basic Java). So I took on a new project. This project will be a little pet of mine just to take a jab at my development skills.
 
+<!--more-->
+
 My long-term goals:
 
 - Use version control via Git

@@ -5,7 +5,7 @@ subtitle:
 description:
 link:
 date: 2013-05-01
-tags: [icloud, ios]
+tags: [iCloud, iOS]
 image:
   feature:
   credit:
@@ -13,6 +13,8 @@ image:
 share: true
 ---
 ###A response to [Oliver Reichenstein's post](http://informationarchitects.net/blog/mountain-lions-new-file-system/)
+
+<!--more-->
 
 I enjoy iCloud—it’s a pretty cool feature in OS X, and every operating system could use something a bit like it installed on a system-level, *but* it still has it’s downsides.
 

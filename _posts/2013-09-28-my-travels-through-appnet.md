@@ -15,6 +15,8 @@ share: true
 
 There’s a new guy on the block in “realtime feed API” services to take on Twitter, that evil bully, and his name is App.net (to prevent any possible confusion, I’ll just call him ADM from now on). ADN is basically a carbon-copy of Twitter. It provides a real-time post feed, just like Twitter, provides the same @mention method, just like Twitter, and even basically has the same UI as Twitter. Something that separates ADN from Twitter, though, is it’s outlook on users, advertisers, and developers.
 
+<!--more-->
+
 Twitter, in recent light, has been playing some nasty tricks on it’s faithful developers. You are limited on how many people can use your Twitter app and recently Twitter has been making huge strides on keeping its users tied to the web interface for its services. That upsets me.
 
 ADN, on the other hand, works in a way that Twitter used to work back in its hayday before many of my friends even used it. There were hundreds of Twitter apps out there in the market and Twitter embraced them all with love and care, giving them some pretty nice APIs and very few restrictions. ADN is doing just the same, pretty much encouraging and recommending third party ADP apps to its users. So what happened to Twitter to make something like APD enter the market?
