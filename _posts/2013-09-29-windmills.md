@@ -9,7 +9,7 @@ tags: [image]
 image:
   feature: windmills.jpg
   thumb: windmills-thumb.jpg
-  credit: Photo by Sean Clayton
+  credit:
   creditlink:
 share: true
 ---
