@@ -8,6 +8,7 @@ date: 2013-05-01
 tags: [iCloud, iOS]
 image:
   feature:
+  thumb:
   credit:
   creditlink:
 share: true
