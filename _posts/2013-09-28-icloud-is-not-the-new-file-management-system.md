@@ -6,6 +6,7 @@ description:
 link:
 date: 2013-05-01
 tags: [iCloud, iOS]
+category: post
 image:
   feature:
   thumb:

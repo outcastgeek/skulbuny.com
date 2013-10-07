@@ -6,8 +6,10 @@ description:
 link:
 date: 2013-06-01
 tags: [programming]
+category: post
 image:
   feature:
+  thumb:
   credit:
   creditlink:
 share: true

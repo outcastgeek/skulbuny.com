@@ -6,8 +6,10 @@ description: Codepen showing how to do absolute vertical and horizontal centerin
 link: http://codepen.io/shshaw/full/gEiDt
 date: 2013-09-01
 tags: [link, css]
+category: link
 image:
   feature:
+  thumb:
   credit:
   creditlink:
 share: true

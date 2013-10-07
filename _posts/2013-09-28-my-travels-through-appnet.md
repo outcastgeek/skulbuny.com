@@ -6,8 +6,10 @@ description:
 link:
 date: 2013-05-15
 tags: [App.net]
+category: post
 image:
   feature:
+  thumb:
   credit:
   creditlink:
 share: true

@@ -6,6 +6,7 @@ description: "A how-to piece on changing the user-switcher avatar in Google Chro
 link:
 date: 2013-10-06
 tags: [Google Chrome, tip]
+category: post
 image:
   feature:  chromerainbow.png
   thumb: chromerainbow-thumb.png

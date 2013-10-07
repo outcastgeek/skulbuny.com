@@ -6,6 +6,7 @@ description:
 link:
 date: 2013-09-29
 tags: [video, TTT, gaming]
+category: video
 image:
   feature:
   thumb:
