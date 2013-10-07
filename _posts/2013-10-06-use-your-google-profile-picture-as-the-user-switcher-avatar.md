@@ -24,6 +24,7 @@ If you use multiple accounts for Google Chrome, you'll know what the user-switch
 3. Enable "Enable GAIA profile name and icon"
 4. Restart Google Chrome
 
+<!--more-->
 ---
 
 ###Images
