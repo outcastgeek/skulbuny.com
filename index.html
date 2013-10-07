@@ -22,14 +22,16 @@ image:
         </span>
       </span>
       {% capture truncated_content %}
-        {{ page.content | truncatewords: 0 }}
+        {{ post.content | truncatewords: 150, '' }}
       {% endcapture %}
-      {% if page.content != truncated_content %}
+      {% if post.content > truncated_content %}
         <span class="wordcount">
           <p>
-            Word count: {{ page.content | number_of_words }}
+            Word count: {{ post.content | number_of_words }}
           </p>
         </span>
+      {% else %}
+        <span></span>
       {% endif %}
     </div><!-- /.entry-meta -->
     {% if post.link %}
@@ -45,36 +47,36 @@ image:
 {% endfor %}
 
 <div class="pagination">
-  {% if paginator.previous_page %}
+  <!-- {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
       <a href="{{ site.url }}" class="btn">Previous</a>
     {% else %}
       <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="btn">Previous</a>
     {% endif %}
   {% else %}
-    Previous
-  {% endif %}
+    <span class="btn btn-disabled">Previous</span>
+  {% endif %} -->
   <ul class="inline-list">
     <li>
       {% if paginator.page == 1 %}
-        <span class="current-page">1</span>
+        <span class="current-page btn btn-disabled">1</span>
       {% else %}
-        <a href="{{ site.url }}">1</a>
+        <a class="btn" href="{{ site.url }}">1</a>
       {% endif %}
     </li>
     {% for count in (2..paginator.total_pages) %}
       <li>
         {% if count == paginator.page %}
-          <span class="current-page">{{ count }}</span>
+          <span class="current-page btn btn-disabled">{{ count }}</span>
         {% else %}
-          <a href="{{ site.url }}/page{{ count }}">{{ count }}</a>
+          <a class="btn" href="{{ site.url }}/page{{ count }}">{{ count }}</a>
         {% endif %}
       </li>
     {% endfor %}
   </ul>
-  {% if paginator.next_page %}
-    <a href="{{ site.url }}/page{{ paginator.next_page }}" class="btn">Next</a>
+  <!-- {% if paginator.next_page %}
+    <a class="btn" href="{{ site.url }}/page{{ paginator.next_page }}" class="btn">Next</a>
   {% else %}
-    Next
-  {% endif %}
+    <span class="btn btn-disabled">Next</span>
+  {% endif %} -->
 </div>

@@ -139,6 +139,17 @@ iframe {
     color: @info;
   }
 }
+.btn-disabled {
+  @color: #ddd;
+  background-color: @color;
+  color: darken(@color, 20%);
+  border-color: darken(@color, 10%);
+  &:hover {
+    background-color: @color;
+    color: darken(@color, 20%);
+    cursor: default;
+  }
+}
 
 // Well
 // --------------------------------------------------
