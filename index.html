@@ -16,27 +16,22 @@ image:
           <a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a>
         </time>
       </span>
-      <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name" class="fn">
-          <a href="{{ site.url }}/about" title="About {{ site.owner.name }}" itemprop="url">{{ site.owner.name }}</a>
-        </span>
-      </span>
       {% if post.category == 'image' %}
-        <span>
-          <p><i class="icon-picture"></i> Image</p>
-        </span>
+      <span>
+        <p><i class="icon-picture"></i> Image</p>
+      </span>
       {% elsif post.category == 'link' %}
-        <span>
-          <p><i class="icon-link"></i> Link</p>
-        </span>
+      <span>
+        <p><i class="icon-link"></i> Link</p>
+      </span>
       {% elsif post.category == 'video' %}
-        <span>
-          <p><i class="icon-youtube-play"></i> Video</p>
-        </span>
+      <span>
+        <p><i class="icon-youtube-play"></i> Video</p>
+      </span>
       {% else %}
-        <span>
-          <p>Word count: {{ post.content | number_of_words }}</p>
-        </span>
+      <span>
+        <p>Word count: {{ post.content | number_of_words }}</p>
+      </span>
       {% endif %}
     </div><!-- /.entry-meta -->
     {% if post.link %}
