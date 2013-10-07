@@ -9,11 +9,34 @@ permalink: /archive/index.html
 {% for post in site.posts %}
 <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
-    <div class="entry-meta"><span class="entry-date date published"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard fn" itemprop="author" itemtype="http://schema.org/Person"><a class="url fn" href="{{ site.url }}">{{ site.owner.name }}</a></span>{% if site.disqus_shortname and post.comments %}&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="{{ site.url }}{{ post.url }}#disqus_thread">Comment</a></span>{% endif %}</div><!-- /.entry-meta -->
+    <div class="entry-meta">
+      <span class="entry-date date published updated">
+        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+          <a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a>
+        </time>
+      </span>
+      {% if post.category == 'image' %}
+      <span>
+        <p><i class="icon-picture"></i> Image</p>
+      </span>
+      {% elsif post.category == 'link' %}
+      <span>
+        <p><i class="icon-link"></i> Link</p>
+      </span>
+      {% elsif post.category == 'video' %}
+      <span>
+        <p><i class="icon-youtube-play"></i> Video</p>
+      </span>
+      {% else %}
+      <span>
+        <p>Word count: {{ post.content | number_of_words }}</p>
+      </span>
+      {% endif %}
+    </div><!-- /.entry-meta -->
     {% if post.link %}
-      <h1 class="entry-title" itemprop="name"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" itemprop="url" title="{{ post.title }}"><i class="icon-double-angle-right"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
+      <h3 class="entry-title" itemprop="name"><a href="{{ post.link }}" target="_blank">{{ post.title }} <sup><i class="icon-external-link icon-half"></i></sup></a></h3>
     {% else %}
-      <h1 class="entry-title" itemprop="name"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
+      <h3 class="entry-title" itemprop="name"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h3>
     {% endif %}
   </header>
   <div class="entry-content" itemprop="description">
