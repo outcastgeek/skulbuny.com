@@ -40,7 +40,7 @@ image:
       {% endif %}
     </div><!-- /.entry-meta -->
     {% if post.link %}
-      <h3 class="entry-title" itemprop="name"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" itemprop="url" title="{{ post.title }}"><i class="icon-link"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h3>
+      <h3 class="entry-title" itemprop="name"><a href="{{ post.link }}" target="_blank">{{ post.title }} <sup><i class="icon-external-link icon-half"></i></sup></a></h3>
     {% else %}
       <h3 class="entry-title" itemprop="name"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h3>
     {% endif %}
