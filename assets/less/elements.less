@@ -11,11 +11,18 @@ hr {
 // Figures and images
 // --------------------------------------------------
 figure {
-  margin: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background: @body-color;
+  margin: 0 0 12px 0;
+  padding: 10px;
+  border: 1px solid darken(@body-color, 10%);
   .clearfix();
+  &:last-child {
+    margin: 0 0 0px 0 !important;
+  }
   img {
+    width: 100%;
+    padding: 3px;
+    background: @white;
     margin-bottom: 10px;
   }
   a {
@@ -25,8 +32,7 @@ figure {
       -moz-transition-duration: 0.25s;
       -o-transition-duration: 0.25s;
       &:hover {
-        .translate(0, -5px);
-        .box-shadow(0 0 10px fade(@base-color, 20));
+        .box-shadow(0 0 10px rgba(0,0,0,25%));
       }
     }
   }

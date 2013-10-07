@@ -18,13 +18,15 @@
       {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
     </div><!-- /.entry-image -->
   {% endif %}
+</div><!-- /.entry-header -->
+<header>
   <div class="header-title">
     <div class="header-title-wrap">
       <h1 itemprop="name"><a href="/">{{ site.title }}</a></h1>
       <h2 itemprop="description">{{ page.description }}</h2>
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
-</div><!-- /.entry-header -->
+</header>
 
 <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
   {{ content }}
