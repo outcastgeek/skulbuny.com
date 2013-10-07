@@ -21,21 +21,26 @@ image:
           <a href="{{ site.url }}/about" title="About {{ site.owner.name }}" itemprop="url">{{ site.owner.name }}</a>
         </span>
       </span>
-      {% capture truncated_content %}
-        {{ post.content | truncatewords: 150, '' }}
-      {% endcapture %}
-      {% if post.content > truncated_content %}
-        <span class="wordcount">
-          <p>
-            Word count: {{ post.content | number_of_words }}
-          </p>
+      {% if post.category == 'image' %}
+        <span>
+          <p><i class="icon-picture"></i> Image</p>
+        </span>
+      {% elsif post.category == 'link' %}
+        <span>
+          <p><i class="icon-link"></i> Link</p>
+        </span>
+      {% elsif post.category == 'video' %}
+        <span>
+          <p><i class="icon-youtube-play"></i> Video</p>
         </span>
       {% else %}
-        <span></span>
+        <span>
+          <p>Word count: {{ post.content | number_of_words }}</p>
+        </span>
       {% endif %}
     </div><!-- /.entry-meta -->
     {% if post.link %}
-      <h3 class="entry-title" itemprop="name"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" itemprop="url" title="{{ post.title }}"><i class="icon-double-angle-right"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h3>
+      <h3 class="entry-title" itemprop="name"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" itemprop="url" title="{{ post.title }}"><i class="icon-link"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h3>
     {% else %}
       <h3 class="entry-title" itemprop="name"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h3>
     {% endif %}
