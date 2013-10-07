@@ -13,4 +13,4 @@ I am an interface and experience designer. I have been learning design since I w
 
 I am also a student attending the University of Louisville. Over the course of four years I will be majoring in Web Development, learning object-oriented programming with .NET and C#.
 
-<figure><img src="/images/me.jpg" alt="Sean Clayton"></figure>
+<img src="/images/me.jpg" alt="Sean Clayton">
