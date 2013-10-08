@@ -9,7 +9,7 @@ jQuery(document).ready(function($){
       $widget = $(
         '<div>' +
         '<p>Changed File: <a class="commit-file" href="#" target="_blank"></a></p>' +
-        '<span>Latest change: </span><span class="commit"></span>' +
+        '<span>Commit Message: </span><span class="commit"></span>' +
         '<p><a class="btn btn-info commit-link" href="#" target="_blank"></a></p>' +
         '</div>'
       );
