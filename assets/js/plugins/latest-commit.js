@@ -1,5 +1,19 @@
 jQuery(document).ready(function($){
   $('.latest-commit').each(function(){
+    $.ajax({
+      url: 'https://api.github.com/repos/' + repo + '/commits/master',
+      dataType: 'jsonp',
+      success: function(results) {
+        var repo = results.data, date, pushed_at = 'unknown';
+        var commitUrl = repo.html_url;
+        var fullsha = repo.sha;
+        var sha = fullsha.substring(0,10);
+        var file = repo.files[0].filename;
+        var fileUrl = repo.files[0].blob_url;
+        $widget.find('.commit').text(repo.commit.message);
+        $widget.find('.commit-file').attr('href',fileUrl).text(file).append(" <i class='icon-file-text'></i>");
+        $widget.find('.commit-link').attr('href',commitUrl).text(sha).append(" <i class='icon-large icon-circle-arrow-right'></i>");
+      }
     var $container = $(this), $widget,
       repo = $container.data('repo'),
       vendorName = repo.split('/')[0],
@@ -14,25 +28,6 @@ jQuery(document).ready(function($){
         '</div>'
       );
     $widget.appendTo($container);
-    $.ajax({
-      url: 'https://api.github.com/repos/' + repo + '/commits/master',
-      dataType: 'jsonp',
-      success: function(results) {
-        var repo = results.data, date, pushed_at = 'unknown';
-        var commitUrl = repo.html_url;
-        var fullsha = repo.sha;
-        var sha = fullsha.substring(0,10);
-        var file = repo.files[0].filename;
-        var fileUrl = repo.files[0].blob_url;
-        $widget.find('.commit').text(repo.commit.message);
-        $widget.find('.commit-file').attr('href',fileUrl).text(file).append(" <i class='icon-file-text'></i>");
-        $widget.find('.commit-link').attr('href',commitUrl).text(sha).append(" <i class='icon-large icon-circle-arrow-right'></i>");
-      },
-      error: function() {
-        $widget.find('.commit').text("ERROR: API LIMIT REACHED");
-        $widget.find('.commit-file').text("ERROR: API LIMIT REACHED");
-        $widget.find('.commit-link').text("ERROR: API LIMIT REACHED");
-      }
     });
   });
 });
