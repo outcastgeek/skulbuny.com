@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
       repoUrl = "http://github.com/" + vendorName + '/' + repoName;
       $widget = $(
         '<div>' +
-        '<p>Changed File(s): <a class="commit-file" href="#" target="_blank"></a></p>' +
+        '<p>Changed File: <a class="commit-file" href="#" target="_blank"></a></p>' +
         '<span>Latest change: </span><span class="commit"></span>' +
         '<p><a class="btn btn-info commit-link" href="#" target="_blank"></a></p>' +
         '</div>'
