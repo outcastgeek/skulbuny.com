@@ -24,16 +24,14 @@ jQuery(document).ready(function($){
         var sha = fullsha.substring(0,10);
         var file = repo.files[0].filename;
         var fileUrl = repo.files[0].blob_url;
-        if(! results.data.commit) {
-          $widget.find('.commit').attr('class','commit warning').text('API limit exceeded!');
-          $widget.find('.commit-file').remove();
-          $widget.find('.commit-link').remove();
-        }
-        else {
-          $widget.find('.commit').text(repo.commit.message);
-          $widget.find('.commit-file').attr('href',fileUrl).text(file).append(" <i class='icon-file-text'></i>");
-          $widget.find('.commit-link').attr('href',commitUrl).text(sha).append(" <i class='icon-circle-arrow-right'></i>");
-        }
+        $widget.find('.commit').text(repo.commit.message);
+        $widget.find('.commit-file').attr('href',fileUrl).text(file).append(" <i class='icon-file-text'></i>");
+        $widget.find('.commit-link').attr('href',commitUrl).text(sha).append(" <i class='icon-large icon-circle-arrow-right'></i>");
+      },
+      error: function(thrownError) {
+        $widget.find('.commit').text("API LIMIT REACHED");
+        $widget.find('.commit-file').text("API LIMIT REACHED");
+        $widget.find('.commit-link').text("API LIMIT REACHED");
       }
     });
   });
