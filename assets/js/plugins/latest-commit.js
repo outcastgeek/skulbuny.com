@@ -8,8 +8,9 @@ jQuery(document).ready(function($){
       repoUrl = "http://github.com/" + vendorName + '/' + repoName;
       $widget = $(
         '<div>' +
+        '<p>Changed File(s): <a class="commit-file" href="#" target="_blank"></a></p>' +
         '<span>Latest change: </span><span class="commit"></span>' +
-        '<p><a class="btn btn-info commit-link" href="#"></a></p>' +
+        '<p><a class="btn btn-info commit-link" href="#" target="_blank"></a></p>' +
         '</div>'
       );
     $widget.appendTo($container);
@@ -21,13 +22,17 @@ jQuery(document).ready(function($){
         var commitUrl = repo.html_url;
         var fullsha = repo.sha;
         var sha = fullsha.substring(0,10);
+        var file = repo.files[0].filename;
+        var fileUrl = repo.files[0].blob_url;
         if(! results.data.commit) {
           $widget.find('.commit').attr('class','commit warning').text('API limit exceeded!');
+          $widget.find('.commit-file').remove();
           $widget.find('.commit-link').remove();
         }
         else {
           $widget.find('.commit').text(repo.commit.message);
-          $widget.find('.commit-link').attr('href',commitUrl).attr('target',"_blank").text(sha).append(" <i class='icon-circle-arrow-right'></i>");
+          $widget.find('.commit-file').attr('href',fileUrl).text(file).append(" <i class='icon-file-text'></i>");
+          $widget.find('.commit-link').attr('href',commitUrl).text(sha).append(" <i class='icon-circle-arrow-right'></i>");
         }
       }
     });
