@@ -1,6 +1,6 @@
 // Written by Sean Clayton
 // 2013-10-08
-// http://github.com/skulbuny/latest-commit.js
+// http://github.com/skulbuny/jquery.latest-commit.js
 jQuery(document).ready(function($){
   $('.latest-commit').each(function(){ // Attach to any div/section/whatever with this class
     var $container = $(this), $commit,
