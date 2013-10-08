@@ -28,10 +28,10 @@ jQuery(document).ready(function($){
         $widget.find('.commit-file').attr('href',fileUrl).text(file).append(" <i class='icon-file-text'></i>");
         $widget.find('.commit-link').attr('href',commitUrl).text(sha).append(" <i class='icon-large icon-circle-arrow-right'></i>");
       },
-      error: function(thrownError) {
-        $widget.find('.commit').text("API LIMIT REACHED");
-        $widget.find('.commit-file').text("API LIMIT REACHED");
-        $widget.find('.commit-link').text("API LIMIT REACHED");
+      error: function() {
+        $widget.find('.commit').text("ERROR: API LIMIT REACHED");
+        $widget.find('.commit-file').text("ERROR: API LIMIT REACHED");
+        $widget.find('.commit-link').text("ERROR: API LIMIT REACHED");
       }
     });
   });
