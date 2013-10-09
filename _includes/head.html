@@ -36,8 +36,23 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ site.url }}/assets/css/main.min.css">
+
 <!-- Webfonts -->
-<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+  WebFontConfig = {
+  google: { families: [ 'Lato:700','Lato:400','Lato:300','Lato:100' ]
+     }
+  };
+  (function() {
+   var wf = document.createElement('script');
+   wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+       '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+   wf.type = 'text/javascript';
+   wf.async = 'true';
+   var s = document.getElementsByTagName('script')[0];
+   s.parentNode.insertBefore(wf, s);
+ })();
+</script>
 
 <meta http-equiv="cleartype" content="on">
 
