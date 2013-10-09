@@ -8,8 +8,8 @@ date: 2013-10-08
 tags: [code, jquery, GitHub]
 category: post
 image:
-  feature:
-  thumb:
+  feature: code-blur.jpg
+  thumb: code-blur-thumb.jpg
   credit:
   creditlink:
 share: true
