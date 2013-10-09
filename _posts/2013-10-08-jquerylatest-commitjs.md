@@ -5,7 +5,7 @@ subtitle:
 description: "A lightweight jQuery plugin to display your latest commit."
 link:
 date: 2013-10-08
-tags: [code jquery GitHub]
+tags: [code, jquery, GitHub]
 category: post
 image:
   feature:
