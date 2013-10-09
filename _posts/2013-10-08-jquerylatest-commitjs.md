@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "jquery.latest-commit.js"
-subtitle:
+subtitle: "A jQuery Plugin"
 description: "A lightweight jQuery plugin to display your latest commit."
 link:
 date: 2013-10-08
