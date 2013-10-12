@@ -5,6 +5,9 @@ header address p {
   font-size: .8em;
   line-height: .5em;
 }
+.no-style {
+  list-style: none;
+}
 
 /* IE HAX */
 .lt-ie9 .row { width: 940px; max-width: 100%; min-width: 768px; margin: 0 auto; }
