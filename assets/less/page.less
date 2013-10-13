@@ -169,22 +169,20 @@ body {
 #post,
 #page {
 	.entry-content {
-		@background-color: @white;
 		margin: 40px 0 20px 0;
 		padding: 10px 15px;
-		background-color: @background-color;
+		background-color: @white;
+		box-shadow: 0 6px 12px fade(@black,10);
+		.rounded(3px);
 		@media @medium {
-			.rounded(3px);
+		.rounded(3px);
 			margin-left: 10px;
 			margin-right: 10px;
-			box-shadow: 0 6px 12px fade(@black,10);
 			padding: 20px 30px;
 		}
 		@media @large {
-			.rounded(3px);
 			max-width: 800px;
 			margin: 50px auto 30px auto;
-			box-shadow: 0 6px 12px fade(@black,10);
 			padding: 50px 80px;
 		}
 	}
@@ -231,19 +229,17 @@ body {
 
 // Read More Module
 .read-more {
-	@background-color: @white;
 	position: relative;
+	margin: 40px 2px 20px 2px;
 	padding: 40px 15px 25px;
-	margin: 40px 0 20px 0;
-	padding: 10px 15px;
-	background-color: @background-color;
+	background-color: @white;
+	box-shadow: 0 0 0 1px fade(@border-color,10), 0 6px 12px fade(@black,10);
+	.rounded(3px);
 	@media @medium {
-		box-shadow: 0 6px 12px fade(@black,10);
 		margin: 50px 10px 20px 10px;
 		padding: 50px 40px 25px;
 	}
 	@media @large {
-		box-shadow: 0 6px 12px fade(@black,10);
 		max-width: 800px;
 		padding: 50px 80px;
 		margin: 60px auto;
@@ -332,12 +328,12 @@ body {
 			margin-bottom: 20px;
 			padding: 30px;
 			.rounded(3px);
-			box-shadow: 0 6px 12px fade(@black,10);
+			box-shadow: 0 6px 12px rgba(0,0,0,.25);
 		}
 		@media @large {
 			margin-bottom: 30px;
 			padding: 50px 80px;
-			box-shadow: 0 6px 12px fade(@black,10);
+			box-shadow: 0 6px 12px rgba(0,0,0,.25);
 			.rounded(3px);
 		}
 	}
