@@ -14,3 +14,5 @@ This is the source code that powers [skulbuny.com](http://skulbuny.com).
     `gem install rake`
 - Anemone
     `gem install anemone`
+- Grunt
+    `npm install -g grunt-cli`
