@@ -20,6 +20,8 @@ First of all I think it's important to evaluate technologies on objective rather
 
 I've done a lot of work benchmarking, building apps, and reading the code of Angular to try to come up with a reasonable comparison between their ways of doing things.
 
+<!--more-->
+
 Community / project maturity
 ---------------------------------
 
