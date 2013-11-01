@@ -8,10 +8,10 @@ date: 2013-10-31
 tags: [Angular,React,javascript]
 category:
 image:
-  feature:
-  thumb:
-  credit:
-  creditlink:
+  feature: code-blur.jpg
+  thumb: code-blur-thumb.jpg
+  credit: "By /u/floydophone"
+  creditlink: http://www.reddit.com/r/javascript/comments/1oo1y8
 share: true
 ---
 *This is a post by [/u/floydophone](http://www.reddit.com/user/floydophone) on [Reddit](http://reddit.com) on [this](http://www.reddit.com/r/javascript/comments/1oo1y8) thread.*
@@ -40,11 +40,11 @@ With smaller apps Angular and React don't have a noticeable difference in perfor
 
 React really shines in terms of performance when you want to optimize. React optimizations are just one-liner methods added to a single component to provide "hints" to React to help it short-circuit change detection. We should really write a blog about this, but usually you can add one simple line of code and get crazy (20x) speedups.
 
-With Angular you have to basically turn off data binding for parts of your application since it relies on dirty checking via $watch(). This is slow because you have to keep two copies of the data model around (expensive) and do an O(n) check on each change. At this point you lose many of the benefits of Angular.
+With Angular you have to basically turn off data binding for parts of your application since it relies on dirty checking via `$watch()`. This is slow because you have to keep two copies of the data model around (expensive) and do an O(n) check on each change. At this point you lose many of the benefits of Angular.
 
-The thing is, Angular's philosophy about performance is that 50ms is imperceptible to humans and is an adequate level of performance (http://stackoverflow.com/questions/9682092/databinding-in-angularjs). I think this is crazy: when motion is involved humans can perceive hiccups as small as 16ms (which is why browsers run at 60fps. Movies run at 30fps because the camera captures motion blur). So if you want to use declarative data binding for direct manipulation via touch, you're gonna want to be able to do it in under 16ms. That's the level of performance we aim for (and get) with React. You have to work around Angular to get that level of performance.
+The thing is, Angular's philosophy about performance is that [50ms is imperceptible to humans and is an adequate level of performance](http://stackoverflow.com/questions/9682092/databinding-in-angularjs). I think this is crazy: when motion is involved humans can perceive hiccups as small as 16ms (which is why browsers run at 60fps. Movies run at 30fps because the camera captures motion blur). So if you want to use declarative data binding for direct manipulation via touch, you're gonna want to be able to do it in under 16ms. That's the level of performance we aim for (and get) with React. You have to work around Angular to get that level of performance.
 
-Also, Object.observe() will help in the future, but it's unclear whether it will ever be as fast as our technique which doesn't require any browser support. I've read the implementation of Object.observe() in the v8 source code and it has similar downsides to using getters and setters for everything (I've heard it may change in the future, though).
+Also, `Object.observe()` will help in the future, but it's unclear whether it will ever be as fast as our technique which doesn't require any browser support. I've read the implementation of `Object.observe()` in the v8 source code and it has similar downsides to using getters and setters for everything (I've heard it may change in the future, though).
 
 Finally, I don't think Angular directives have a great notion of lifecycle. With React (and Ext, and some others) we batch reads on the DOM and writes to the DOM. I don't think Angular has a way of enforcing this with directives since you're free to do any sort of DOM manipulation within them. This can be a *huge* source of performance problems if you aren't disciplined everywhere (which is hard to scale in a big eng org)
 
